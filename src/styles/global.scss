@@ -18,6 +18,15 @@
   --purple-400: #9164FA; 
   --purple-500: #8257E5;
   --purple-800: #6F48C9;
+
+  --ciano-300: #75fff1;
+  --ciano-400: #66faeb; 
+  --ciano-500: #57e5d7;
+  --ciano-800: #4ac9bc;
+  --ciano-900: #3fa298;
+
+  --red-50 : #CD5C5C;
+
 }
 //pixels na tela
 @media(max-width:1080px) {
@@ -31,18 +40,19 @@
   }
 }
 body{
-  background: var(--gray-50);
+  background: #191622;
 }
 
-body, input, textarea, button{
+body, input, textarea, button {
   font: 500 1rem Inter, sans-serif;
-  color: var(--gray-500);
+  color: var(--gray-200);
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-family: Lexend, sans-serif;
-  color: var(--gray-800)
+  color: var(--gray-200)
 }
 
 h1{

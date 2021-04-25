@@ -7,6 +7,9 @@ import { convertDurationTimeString } from '../../Utils/convertDurationTimeString
 import Image from 'next/image';
 import styles from './episode.module.scss';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { PlayerContext, usePlayer } from '../../contexts/playercontext';
+import Head from 'next/head';
 
 type Episode={
   id: string;
@@ -25,8 +28,16 @@ type EpisodeProps = {
 }
 
 export default function Episode( {episode}: EpisodeProps) {
+
+  const { play } = usePlayer();
+
   return (
+
     <div className={styles.episode}>
+      <Head>
+       <title> {episode.title} | PodCast </title>
+    </Head>
+
       <div className={styles.thumbnailContainer}>
         <Link href="/">
         <button>
@@ -39,7 +50,7 @@ export default function Episode( {episode}: EpisodeProps) {
         src ={episode.thumbnail}
         objectFit = "cover"
          />
-         <button type="button">
+         <button type="button"  onClick = {() => play(episode)}>
            <img src="/play.svg" alt ="Tocar episódio" />
          </button>
       </div>
@@ -97,7 +108,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     duration: Number(data.file.duration),
     durationAsString: convertDurationTimeString(Number(data.file.duration)),
     description: data.description,
-    utl: data.file.url
+    url: data.file.url
   }
   return {
     props: {

@@ -17,8 +17,8 @@
     gap: 1.5rem;
   
     li{
-      background: var(--white);
-      border: 1px solid var(--gray-100);
+      background: transparent;
+      border: 1px solid var #191622;
       padding: 1.25rem;
       border-radius: 1.5rem;
       position: relative;
@@ -38,7 +38,7 @@
 
         a{
           display: block;
-          color: var(--gray-800);
+          color: var(--gray-200);
           font-family: Lexend, sans-serif;
           font-weight: 600;
           text-decoration: none;
@@ -81,9 +81,6 @@
           }
 
         }
-
-        
-
           }
           button{
             position: absolute;
@@ -92,8 +89,8 @@
     
             width: 2.5rem;
             height: 2.5rem;
-            background: var(--gray-100);
-            border: 1px solid var(--gray-100);
+            background: transparent;
+            border: 0;
             border-radius: 0675rem;
             font-size: 0;
 
@@ -105,7 +102,7 @@
         }
 
         &:hover{
-          filter: brightness(0.95);
+          filter: brightness(0.5);
         }
 
       }
@@ -123,7 +120,7 @@
 
     th,td{
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid var #191622;
     }
     th{
       color: var(--gray-200);
@@ -140,7 +137,7 @@
         border-radius: 0.5rem;
       }
         a{
-          color: var(--gray-800);
+          color: var(--gray-200);
           font-family: Lexend, sans-serif;
           font-weight: 600;
           text-decoration: none;
@@ -152,11 +149,11 @@
           }
          } 
          button{
-    
+           
           width: 2rem;
           height: 2rem;
-          background: var(--gray-100);
-          border: 1px solid var(--gray-100);
+          background: transparent;
+          border: 0;
           border-radius: 0.5rem;
           font-size: 0;
 
@@ -168,7 +165,7 @@
           }
 
               &:hover{
-              filter: brightness(0.95);
+              filter: brightness(0.5);
       }
           }
   }
